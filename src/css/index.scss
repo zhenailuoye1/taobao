@@ -1,0 +1,23 @@
+$swidth : 640px;
+* { margin: 0; padding: 0; }
+body, html,.abody { height: 100%; margin: 0; padding: 0; overflow: hidden; max-width: 640px;}
+img {
+    position: absolute;
+}
+
+#loading {
+    img {width: $swidth;z-index: 100}
+    img:nth-child(4) { -webkit-animation: 2s 2s fadeout linear forwards}
+    img:nth-child(3) { -webkit-animation: 2s 6s fadeout linear forwards}
+    img:nth-child(2) { -webkit-animation: 2s 10s fadeout linear forwards}
+    img:nth-child(1) { -webkit-animation: 2s 14s fadeout linear forwards}
+}
+
+@-webkit-keyframes fadeout {
+    from {
+        opacity:1
+    }
+    to {
+        opacity: 0
+    }
+}
