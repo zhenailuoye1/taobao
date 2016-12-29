@@ -1,23 +1,382 @@
-$swidth : 640px;
-* { margin: 0; padding: 0; }
-body, html,.abody { height: 100%; margin: 0; padding: 0; overflow: hidden; max-width: 640px;}
-img {
+$w: 640px;
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body,
+html {
+    background-color: #fdfff2;
+    font-family: Arial;
+    color: #555;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    max-width: 750px;
+    position: relative;
+    -webkit-overflow-scrolling: touch;
+}
+
+img,
+iframe,
+acronym {
+    border: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul,
+li {
+    list-style: none;
+    height: 100%;
+    position: absolute;
+}
+
+input,
+button,
+a {
+    background: none;
+    border: none;
+    outline: medium;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+
+/*-webkit-tap-highlight-color:rgba(0,0,0,0);  -webkit-user-modify:read-write-plaintext-only; }*/
+
+::-webkit-input-placeholder {
+    /* WebKit browsers */
+    color: #dd8337;
+}
+
+img,
+div {
     position: absolute;
 }
 
 #loading {
-    img {width: $swidth;z-index: 100}
-    img:nth-child(4) { -webkit-animation: 2s 2s fadeout linear forwards}
-    img:nth-child(3) { -webkit-animation: 2s 6s fadeout linear forwards}
-    img:nth-child(2) { -webkit-animation: 2s 10s fadeout linear forwards}
-    img:nth-child(1) { -webkit-animation: 2s 14s fadeout linear forwards}
+    z-index: 200;
+    -webkit-animation: 0.1s 0s left linear forwards;
 }
 
-@-webkit-keyframes fadeout {
-    from {
-        opacity:1
+#foreword {
+    width: $w;
+    height: 100%;
+    z-index: 100;
+    display: none;
+    > img {
+        z-index: 110;
+        left: 300px;
+        bottom: 20px;
+        -webkit-animation: 2s fade-in-out linear infinite
     }
-    to {
-        opacity: 0
+    ul {
+        list-style: none;
+        width: $w;
+        position: absolute;
+    }
+    li {
+        width: $w;
+        float: left;
+        position: absolute;
+    }
+    li:nth-child(1) {
+        z-index: 100;
+        background: url(../img/f1_bg.jpg) no-repeat;
+        background-size:100% 100%;
+        img:first-child {
+        }
+    }
+    li:nth-child(2) {
+        background: url(../img/f2_bg.jpg) no-repeat;
+        background-size:100% 100%;
+        z-index: 90;
+        img:first-child {
+            display: none;
+        }
+    }
+    li:nth-child(3) {
+        background: url(../img/f3_bg.jpg) no-repeat;
+        background-size:100% 100%;
+        z-index: 80;
+        img:first-child {
+            top: 42px;
+            left: 480px;
+            display: none;
+        }
+    }
+    li:nth-child(4) {
+        background: url(../img/f4_bg.jpg) no-repeat;
+        background-size:100% 100%;
+        z-index: 70;
+        img:first-child {
+            left: 204px;
+            display: none;
+        }
     }
 }
+
+#calc {
+    width: $w;
+    height: 100%;
+    
+    .num {
+        width: 140px;
+        height: 54px;
+        position: absolute;
+    }
+    input:nth-child(1) {
+            width: 440px;
+            height: 50px;
+            position: absolute;
+            top: 38px;
+            left: 52px;
+            font-size: 30px;
+            color: #dd8337;
+            font-weight:bold;
+            text-align: center;
+            background-color: #eeddad;
+            border:5px solid #dd8337;
+            border-radius: 40px;
+        }
+    .calculator div {
+        :nth-child(1) {
+            top: 103px;
+            left: 48px;
+        }
+        :nth-child(2) {
+            top: 103px;
+            left: 212px;
+        }
+        :nth-child(3) {
+            top: 103px;
+            left: 370px;
+        }
+        :nth-child(4) {
+            top: 162px;
+            left: 48px;
+        }
+        :nth-child(5) {
+            top: 162px;
+            left: 212px;
+        }
+        :nth-child(6) {
+            top: 162px;
+            left: 370px;
+        }
+        :nth-child(7) {
+            top: 220px;
+            left: 48px;
+        }
+        :nth-child(8) {
+            top: 220px;
+            left: 212px;
+        }
+        :nth-child(9) {
+            top: 220px;
+            left: 370px;
+        }
+        :nth-child(10) {
+            top: 278px;
+            left: 48px;
+        }
+        :nth-child(11) {
+            top: 278px;
+            left: 212px;
+        }
+        :nth-child(12) {
+            top: 278px;
+            left: 370px;
+        }
+    }
+        
+    
+    > div {
+        width: $w;
+        height: 100%;
+        
+
+    }
+    #calc_1 {
+        
+        background: url('../img/c1_bg.jpg') no-repeat;
+        background-size:100% 100%;
+        display: block;
+        :nth-child(1) {
+            top: 128px;
+            left: 70px;
+        }
+        :nth-child(2) {
+            position: absolute;
+            width: 266px;
+            height: 86px;
+            top: 826px;
+            left: 166px;
+            background: url('../img/c1_bt.png') no-repeat;
+        }
+    }
+    #calc_2 {
+        background: url('../img/c2_bg.jpg') no-repeat;
+        background-size:100% 100%;
+        display: none;
+        > img:nth-child(1) {
+            top: 36px;
+            left: 102px;
+        }
+        >div:nth-child(2) {
+            top: 180px;
+            left: 44px;
+            width: 552px;
+            height: 388px;
+            background: url('../img/calc_1.png');
+        }
+    }
+    #calc_3 {
+        background: url('../img/c3_bg.jpg') no-repeat;
+        background-size:100% 100%;
+        display: none;
+        >:nth-child(1) {
+            top: 32px;
+            left: 74px;
+        }
+        >:nth-child(2) {
+            top: 128px;
+            left: 44px;
+            width: 552px;
+            height: 388px;
+            background: url('../img/calc_1.png')
+        }
+        input {
+            width: 216px;
+            height: 50px;
+            position: absolute;
+            font-size: 30px;
+            color: #dd8337;
+            font-weight:bold;
+            text-align: center;
+            background-color: #eeddad;
+            border:5px solid #dd8337;
+            border-radius: 40px;
+        }
+        input:nth-of-type(1) {
+
+        }
+        input:nth-of-type(2) {
+            top: 38px;
+            left: 284px;
+        }
+    }
+    #calc_4 {
+        background: url('../img/c4_bg.jpg') no-repeat;
+        background-size:100% 100%;
+        display: none;
+        >:nth-child(1) {
+            top: 32px;
+            left: 74px;
+        }
+        >:nth-child(2) {
+            top: 134px;
+            left: 44px;
+            width: 552px;
+            height: 388px;
+            background: url('../img/calc_1.png');
+        }
+    }
+    #calc_5 {
+        background: url('../img/c5_bg.jpg') no-repeat;
+        background-size:100% 100%;
+        display: none;
+        >:nth-child(1) {
+            top: 32px;
+            left: 138px;
+        }
+        >:nth-child(2) {
+            top: 186px;
+            left: 44px;
+            width: 551px;
+            height: 379px;
+            background: url('../img/calc_1.png')
+        }
+    }
+    #calc_6 {
+        background: url('../img/c1_bg.jpg') no-repeat;
+        background-size:100% 100%;
+        display: none;
+        >:nth-child(1) {
+            background: url('../img/c6_1.png') no-repeat;
+            background-size: 100% 100%;
+            top: 130px;
+            left: 106px;
+            width: 423px;
+            height: 604px;
+            #result {
+                width: 360px;
+                height: 72px;
+                top: 48px;
+                left: 40px;
+                font-size: 72px;
+                color: red;
+                text-align: center;
+                font-weight: bold;
+            }
+        }
+        :nth-child(3) {
+            background: url('../img/c6_3.png') no-repeat;
+            background-size: 100% 100%;
+            top: 36px;
+            right: 0px;
+            width: 637px;
+            height: 753px;
+            display: none;
+        }
+        :nth-child(5) {
+            position: absolute;
+            width: 248px;
+            height: 90px;
+            top: 764px;
+            left: 68px;
+            background: url('../img/c6_bt1.png') no-repeat;
+        }
+        :nth-child(6) {
+            position: absolute;
+            width: 248px;
+            height: 90px;
+            top: 764px;
+            left: 354px;
+            background: url('../img/c6_bt2.png') no-repeat;
+        }
+    }
+}
+
+.up {
+    -webkit-animation: 1s up linear forwards;
+}
+
+.dark {
+    -webkit-filter:brightness(.5);
+}
+
+@-webkit-keyframes left {
+    to {
+        -webkit-transform: translate(-640px)
+    }
+}
+
+@-webkit-keyframes up {
+    to {
+        -webkit-transform: translateY(-1200px)
+    }
+}
+
+@-webkit-keyframes fade-in-out {
+    0%,100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+

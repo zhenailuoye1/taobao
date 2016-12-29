@@ -4,18 +4,100 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=640, user-scalable=no">
-    <title>这是一道亲情计算题</title>
-    <link rel="stylesheet" href="./css/index.css">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/index.css">
 </head>
 
 <body>
-    <div id='loading'>
-       <img src="img/4.png" alt="1">
-       <img src="img/3.png" alt="2">
-       <img src="img/2.png" alt="3">
-       <img src="img/1.png" alt="4">
+    <!--加载界面-->
+    <div id="loading">
+        <img src="img/loading.jpg" alt="">
     </div>
-    
+    <!--引言-->
+    <div id="foreword">
+        <ul>
+            <li>
+                <img src="img/f1_1.png" alt="">
+            </li>
+            <li>
+                <img src="img/f2_1.png" alt="">
+            </li>
+            <li>
+                <img src="img/f3_1.png" alt="">
+            </li>
+            <li>
+                <img src="img/f4_1.png" alt="">
+            </li>
+        </ul>
+        <img src="img/down.png" alt="">
+    </div>
+    <div id="calc">
+        <div id="calc_1">
+            <img src="img/c1_1.png" alt="">
+            <button type="button" class="sub"></button>
+        </div>
+        <div id="calc_2">
+            <img src="img/c2_1.png" alt="">
+            <div class="calculator" data-type="back_year">
+                <input type="text" placeholder="最近一次团聚的时刻" id="back" disabled>
+                <div class="key">
+                </div>
+            </div>
+        </div>
+        <div id="calc_3">
+            <img src="img/c3_1.png" alt="">
+            <div class="calculator" data-type="parent_year">
+                <input type="text" placeholder="父亲的出生年份" id="father" disabled>
+                <input type="text" placeholder="母亲的出生年份" id="mother" disabled>
+                <div class="key">
+                </div>
+            </div>
+        </div>
+        <div id="calc_4">
+            <img src="img/c4_1.png" alt="">
+            <div class="calculator" data-type="you_year">
+                <input type="text" placeholder="你的出生年份" id="you" disabled>
+                <div class="key">
+                </div>
+            </div>
+        </div>
+        <div id="calc_5">
+            <img src="img/c5_1.png" alt="">
+            <div class="calculator" data-type="back_count">
+                <input type="text" placeholder="每年回家的次数" id="count" disabled>
+                <div class="key">
+                </div>
+            </div>
+        </div>
+        <div id="calc_6">
+            <div>
+                <div id="result"></div>
+            </div>
+            <!--<img src="img/c6_2.png" alt="">
+            <div></div>
+            <img src="img/c6_4.png" alt="">-->
+            <button type="button" class="sub"></button>
+            <button type="button"></button>
+        </div>
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/hammer.min.js"></script>
+    <script src="js/index.js"></script>
+    <script id="key" type="text/html">
+            <img src="img/num1.png" data-num="1" class="num" />
+            <img src="img/num2.png" data-num="2" class="num" />
+            <img src="img/num3.png" data-num="3" class="num" />
+            <img src="img/num4.png" data-num="4" class="num" />
+            <img src="img/num5.png" data-num="5" class="num" />
+            <img src="img/num6.png" data-num="6" class="num" />
+            <img src="img/num7.png" data-num="7" class="num" />
+            <img src="img/num8.png" data-num="8" class="num" />
+            <img src="img/num9.png" data-num="9" class="num" />
+            <img src="img/num_del.png" data-num="" class="num del" />
+            <img src="img/num0.png" data-num="0" class="num" />
+            <img src="img/num_sub.png" data-num="" class="num sub" />
+    </script>
 </body>
 
 </html>

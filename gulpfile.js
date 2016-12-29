@@ -46,7 +46,7 @@ gulp.task('img', function() {
         .pipe(notify({ message: 'Images task complete' }));
 });
 
-/*gulp.task('css', function() {
+gulp.task('css', function() {
      gulp.src('src/css/*.css')
         .pipe(clean_css())
         .pipe(assetRev())
@@ -54,7 +54,7 @@ gulp.task('img', function() {
         //.pipe(rename({suffix: '.min'}))
         .pipe(gulp.dest('dist/css'))
         .pipe(notify({ message: 'Css task complete' }));
-});*/
+});
 
 gulp.task('sass', function() {
      gulp.src('src/css/*.scss')
