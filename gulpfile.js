@@ -85,6 +85,7 @@ gulp.task('watch', function() {
     gulp.watch('src/img/**/*', ['img','rev']);
     gulp.watch('src/js/**/*', ['js','rev']);
     gulp.watch('src/css/**/*', ['sass','rev']);
+    gulp.watch('src/**/*', ['rev']);
 
 });
 
